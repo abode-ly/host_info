@@ -1,1 +1,1 @@
-# host_info
+# host_info_module
