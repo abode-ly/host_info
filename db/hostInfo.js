@@ -52,7 +52,9 @@ var joinBy = [
   "November 2018",
   "December 2018"
 ];
-
+function sum(a, b) {
+  return a + b;
+}
 function getRandomInt(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
@@ -81,4 +83,5 @@ const generateHostInfo = () => {
     });
   }
 };
-generateHostInfo();
+// generateHostInfo();
+module.exports = sum;
