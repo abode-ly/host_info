@@ -1,7 +1,8 @@
-const sum = require('../../db/hostInfo.js');
+const generateHostInfo = require('../../db/hostInfo.js');
 
-test('generate number should be between 1 and 9', getRandomIntTest);
 
-function getRandomIntTest() {
-    expect(sum(1, 1)).toBe(2); 
+test('generate number should be between 1 and 9', generateRandom);
+
+function generateRandom() {
+    expect(typeof(generateHostInfo())).toBe('object'); 
 }

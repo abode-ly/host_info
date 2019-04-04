@@ -1,6 +1,9 @@
 var mongoose = require("mongoose");
 var faker = require("faker");
-var data = require("./seed-data.js");
+var locName = require("./seed-data.js");
+var getRandomInt = require("./seed-data.js");
+var resTime = require("./seed-data.js");
+var joinBy = require("./seed-data.js");
 
 mongoose.connect("mongodb://localhost/hostinfo", {
   useNewUrlParser: true,
@@ -19,49 +22,6 @@ var hostInfoSchema = new mongoose.Schema({
 const HostInfo = mongoose.model("HostInfo", hostInfoSchema);
 
 module.exports = HostInfo;
-
-var resTime = [
-  "within an hour",
-  "within two hours",
-  "within three hours",
-  "within less than five hours"
-];
-var locName = [
-  "San Francisco, CA",
-  "New York City,NY",
-  "Washington D.C",
-  "Chicago, Illinois",
-  "Las Vegas, Nevada",
-  "San Diego",
-  "Honolulu, Hawaii"
-];
-var joinBy = [
-  "January 2019",
-  "February 2019",
-  "March 2019",
-  "January 2018",
-  "February 2018",
-  "March 2018",
-  "April 2018",
-  "May 2018",
-  "June 2018",
-  "July 2018",
-  "August 2018",
-  "September 2018",
-  "October 2018",
-  "November 2018",
-  "December 2018"
-];
-function sum(a, b) {
-  return a + b;
-}
-function getRandomInt(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-
-  //The maximum is exclusive and the minimum is inclusive
-  return Math.floor(Math.random() * (max - min)) + min;
-}
 
 const generateHostInfo = () => {
   for (let num = 1; num < 101; num++) {
@@ -83,5 +43,10 @@ const generateHostInfo = () => {
     });
   }
 };
+
+
+//UNCOMMENT TO GENERATE NEW DATA
 // generateHostInfo();
-module.exports = sum;
+
+module.exports = generateHostInfo;
+module.exports = HostInfo;

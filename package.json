@@ -20,14 +20,15 @@
   "homepage": "https://github.com/abode-ly/host_info_module#readme",
   "dependencies": {
     "axios": "^0.18.0",
+    "babel-cli": "^6.26.0",
     "babel-loader": "^6.3.2",
+    "babel-preset-env": "^1.7.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "body-parser": "^1.18.3",
-    "express": "^4.16.4",
     "faker": "^4.1.0",
-    "mongoose": "^5.4.20",
-    "morgan": "^1.9.1",
+    "jest": "^24.7.0",
+    "mongoose": "^5.4.21",
     "node": "^11.12.0",
     "nodemon": "^1.18.10",
     "react": "^16.8.6",
@@ -35,9 +36,11 @@
     "react-router-dom": "^5.0.0",
     "reactstrap": "^7.1.0",
     "request": "^2.88.0",
+    "superagent": "^5.0.2",
+    "supertest": "^4.0.2",
     "underscore": "^1.9.1",
     "webpack": "^2.2.1",
-    "webpack-cli": "^3.3.0"
+    "webpack-cli": "^2.1.3"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
@@ -45,8 +48,6 @@
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-jsx-a11y": "^6.2.1",
-    "eslint-plugin-react": "^7.12.4",
-    "jest": "^24.6.0",
-    "mongodb-memory-server": "^4.2.1"
+    "eslint-plugin-react": "^7.12.4"
   }
 }
